@@ -1,0 +1,170 @@
+
+
+/*======================
+======Portfolio CSS=====
+========================*/
+
+#portfolio {
+  padding:110px 0px 150px;
+  .portfolio-filter {
+    margin-bottom: 70px;
+    margin-top: 10px;
+    li {
+      display: inline-block;
+      border-top:1px solid $c1;
+      border-bottom:1px solid $c1;
+      &:first-child {
+        border-left:1px solid $c1;
+      }
+      &:last-child a {
+        padding:5px 14px 5px 40px;
+      }
+      &:last-child a.active, &:last-child a:hover {
+        padding:5px 14px 5px 40px;
+      }
+      a {
+        color: $secondary;
+        font-size: 14px;
+        display:block;
+        text-transform: uppercase;
+        position:relative;
+        padding:5px 15px 5px 40px;
+        &:after {
+          position: absolute;
+          content: "";
+          bottom: -7px;
+          right: -20px;
+          border-right: 1px solid #cacaca;
+          width: 15px;
+          height: 23px;
+          transform:rotate(220deg);
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          top: -7px;
+          right: -20px;
+          border-right: 1px solid #cacaca;
+          width: 15px;
+          height: 23px;
+          transform: rotate(-220deg);
+        }
+      }
+    }
+    a:hover,.active {
+      //border-top:5px solid $primary;
+      z-index:10;
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0px;
+        left: 0px;
+        width: 0;
+        //@include transition(all, 0.5s, ease);
+        border-top: 17px solid transparent;
+        border-right: 17px solid;
+        border-bottom: 17px solid transparent;
+        transform:rotate(180deg);
+      }
+      &:after {
+        position:absolute;
+        content:"";
+        border-top:transparent !important;
+        border-left:transparent !important;
+        border:1px solid $primary;
+        width:25px;
+        height:25px;
+        top:5px;
+        right:-12px;
+        z-index:-20;
+        background:$primary;
+        transform:rotate(-45deg);
+      }
+      background:$primary;
+      color:$white;
+    }
+    a:hover {
+      &:before {
+        border-right-color:$primary;
+      }
+    }
+    li a:hover + li {
+      a {
+        &:before {
+          border-right-color:$primary;
+        }
+      }
+    }
+    li:first-child {
+      .active:before {
+        display:none;
+      }
+      a {
+          &:hover {
+            &:before {
+              display:none;
+            }
+          }
+        }
+    }
+  }
+}
+
+.portfolio-items {
+  img {
+    width: 100%;
+  }
+  .portfolio-image {
+    margin-bottom: 30px;
+  }
+}
+
+
+.portfolio-image {
+  position:relative;
+  overflow: hidden;
+  .gallery-overlay {
+    @include position(absolute);  
+    height: calc(100%);
+    width: calc(100%);   
+    background: rgba($secondary,0.8);         
+  }
+  .overlay {
+    @include position(relative, $left: 0px, $bottom:0%);
+    @include transition-default(all, 0.2s, ease);
+    @include size(calc(100% - 0px), calc(100%));
+    text-align:center;
+    .icon-link {
+      position: relative;
+      left: -5px;
+    }   
+    a {
+      text-align: center;    
+      display: inline-block;
+      height: 45px;
+      width: 45px;
+      line-height: 45px;
+      background: transparent;
+      color: $white;
+      position: relative;
+      top: 39%;
+      border: 1px solid $white;
+      transform:rotate(-45deg);
+      i {
+        @include font-size(1.6);
+        transform:rotate(45deg);
+      }
+      &:hover i {
+        color: $secondary;
+      }
+    }
+  }
+  &:hover {
+    .overlay {
+      bottom: calc(100% + 0px);
+      background: rgba($primary,0.7);
+    }
+  }
+}
+
+

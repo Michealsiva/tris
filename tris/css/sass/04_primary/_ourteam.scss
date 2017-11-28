@@ -1,0 +1,175 @@
+
+/*=====================
+======Our Team CSS=====
+=======================*/
+
+#team-carousel {
+  position: relative;
+}
+
+
+.top-arrow-white {
+  position: relative;
+  &:after {
+    position:absolute;
+    content:"";
+    border-bottom:1px solid $c1;
+    top:0px;
+    width:15.5%;
+    right:33%;
+  }
+  &:before {
+    position: absolute;
+    content:"";
+    height: 30px;
+    width: 30px;
+    transform: rotate(45deg);
+    top: -14px;
+    left: calc(50% - 15px);
+    background-color: $c2;
+    border-left:1px solid $c1;
+    border-top:1px solid $c1;
+  }
+  .top-arrow-before {
+    &:before {
+      position:absolute;
+      content:"";
+      border-bottom:1px solid $c1;
+      top:0px;
+      width:15.5%;
+      left:33%;
+    }
+  }
+}
+
+#our-team {
+  background-color: $c2;
+  padding: 110px 0;
+  h2 {
+    margin-bottom: 35px;
+  }
+  .team-members {
+    padding: 0; 
+    display: block;
+    overflow: hidden;
+  }
+}
+.avatar-box {
+  &:after {
+    border:1px solid $c1;
+    position:absolute;
+    content:"";
+    width:185px;
+    height:185px;
+    transform:rotate(45deg);
+    top:8%;
+    left:18.4%;
+    background:$white;
+    border-right:transparent;
+    border-bottom:transparent;
+
+  }
+}
+.team-avatar {
+  position: relative;
+  @include size(150px, 150px);
+  display: block;
+  overflow: hidden;  
+  -moz-background-clip: padding;    
+  -webkit-background-clip: padding;  
+  background-clip: padding-box; 
+  @include rotate(-45);
+  background: $white;
+  margin: 0 auto 50px;
+  top:125px;
+  img {
+    margin: 0;
+    width: 100%;
+  }
+  .ourteam-overlay {
+    @include size(210px,210px);
+    margin: 0;  
+    @include rotate(45);
+    @include position(relative, $top: -30px, $left: -30px);   
+  } 
+}
+.single-member {
+  background-color: $white;
+  border: 1px solid $c1;
+  padding:45px 25px;
+  padding-top:130px;
+  text-align: center;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  p {
+    font-size:14px;
+    line-height:24px;
+    margin-bottom:2.2em;
+  }
+  h4 {
+    font-size:20px;
+    color:$primary;
+    margin-bottom:5px;
+    text-transform:uppercase;
+  }
+  .client-description {
+    font-size:13px;
+    color:$secondary;
+    margin-bottom:2em;
+    font-weight:400;
+    text-transform:uppercase;
+  }
+  h4, .client-description {
+    text-align: center;
+  }
+}
+.team-content {
+  margin-top:-65px;
+  &:hover {
+    .avatar-box {
+      &:after {
+        background:$primary;
+        border:1px solid $primary;
+      }
+    }
+    .single-member {
+      background:$primary;
+      border:1px solid $primary;
+      h4,h5,p {
+        color:$white;
+      }
+      .socials {
+        a {
+          background:$white !important;
+          i {
+            color:$secondary;
+          }
+        }
+      }
+    }
+  }
+}
+.socials {
+  margin-top:33px;
+  a {
+    color: $white;
+    display: inline-block;
+    font-size: 16px;
+    height: 22px;
+    line-height: 18px;
+    margin-right: 5px;
+    text-align: center;
+    width: 22px;
+    background:$secondary;
+    opacity:.9;
+    margin-right:12px;
+    transform:rotate(-45deg);
+    i {
+      transform:rotate(45deg);
+      font-size:12px;
+    }
+  }
+}
+

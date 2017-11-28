@@ -1,0 +1,259 @@
+/*--------------------------------------------------------------
+4.1 Preloader
+--------------------------------------------------------------*/
+@import "preloader";
+
+/*--------------------------------------------------------------
+4.2 Slider
+--------------------------------------------------------------*/
+@import "slider";
+
+/*--------------------------------------------------------------
+4.3 Service Section
+--------------------------------------------------------------*/
+@import "service-icon";
+
+/*--------------------------------------------------------------
+4.4 Stats Section
+--------------------------------------------------------------*/
+@import "stats";
+
+/*--------------------------------------------------------------
+4.5 Our Serive & CTA Section
+--------------------------------------------------------------*/
+@import "our-service-and-cta";
+
+/*--------------------------------------------------------------
+4.6 Portfolio
+--------------------------------------------------------------*/
+@import "portfolio";
+
+/*--------------------------------------------------------------
+4.7 Ourteam
+--------------------------------------------------------------*/
+@import "ourteam";
+
+/*--------------------------------------------------------------
+4.8 Pricing
+--------------------------------------------------------------*/
+@import "pricing";
+
+/*--------------------------------------------------------------
+4.9 Testimonial
+--------------------------------------------------------------*/
+@import "testimonial";
+
+/*--------------------------------------------------------------
+4.10 Blog
+--------------------------------------------------------------*/
+@import "blog";
+
+/*--------------------------------------------------------------
+4.11 Client Carousel
+--------------------------------------------------------------*/
+@import "client-carousel";
+
+/*--------------------------------------------------------------
+4.12 Contact
+--------------------------------------------------------------*/
+@import "contact";
+
+
+/* top arrow with bg color */
+.top-arrow {
+  position: relative;
+  &:before {
+    position: absolute;
+    content:"";
+    height: 60px;
+    width: 60px;
+    transform: rotate(45deg);
+    top: -8px;
+    left: calc(50% - 30px);
+    background-color: $primary;
+  }
+}
+
+/*  title divider */
+.heading-section {
+  text-align: center;
+	.head-description { 
+	   @include font-size(1.5);
+	   width: 80%;
+	   margin: 0 auto 60px;
+     line-height:28px;
+	}
+}
+.heading-section.clr-white {
+	.title-divider,.head-description {
+		color: $white;
+	}
+}
+
+.title-divider {
+  position: relative;
+  margin-bottom: 38px;  
+  border-color: $primary;
+  text-align: center;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+   &:before {
+      position: absolute;
+      content:"";
+      width: 30px;
+      height: 3px;
+      border-color:inherit;
+      border-bottom-style:solid;
+      border-bottom-width:1px;
+      border-top-style:solid;
+      border-top-width:1px;
+      left: calc(50% - 42px);
+      bottom:-10px;
+      z-index:1;
+   }
+    &:after {
+      position: absolute;
+      content:"";
+      width: 30px;
+      height: 3px;
+      border-color:inherit;
+      border-bottom-style:solid;
+      border-bottom-width:1px;
+      border-top-style:solid;
+      border-top-width:1px;
+      left: calc(50% + 13px); 
+      bottom:-10px;
+   }
+   span {   
+    color: $primary;
+     &:after {
+      width: 9px;
+	    height: 9px;
+	    position: absolute;
+	    bottom: -8px;
+	    left: calc(50% - 6px);
+	    transform: rotate(45deg);
+	    transform-origin: 0 100%;
+	    content: "";
+	    border: 2px solid $primary;
+	    background-color: $primary;
+     }
+   }
+
+}
+
+p {
+  .btn.large {
+    color:$white;
+    margin-top:10px;
+    background:$primary;
+    padding:0px;
+    width:170px;
+    height:41px;
+    line-height:38px;
+    border-radius:0;
+    font-size:16px;
+    text-transform:uppercase;
+    &:hover {
+      background:$secondary;
+    }
+  }
+}
+
+/* Color Switcher */
+
+
+#icon-label {
+  border: 1px solid #eeeeee;
+  border-right:0;
+  border-radius: 5px 0px 0px 5px;
+  box-shadow:-10px 10px 0 0 rgba(122, 122, 122, 0.1);
+  float: left;
+  position: relative;
+  font-size: 12pt;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+}
+
+.color-icon-before {
+  position: relative;
+  padding: 5px;
+  line-height: 40px;
+  text-align: right;
+  color: #000000;
+  border-right: 10px solid #ffffff;
+  height: 48px;
+  &:before {
+    position:absolute;
+    content:"\f013";
+    font-family: fontawesome;
+    font-size: 23px;
+    color: #000;
+    animation: 4s linear 0s normal none infinite running spin;
+    right:4px;
+  }
+}
+
+@-moz-keyframes spin {
+from { -moz-transform: rotate(0deg); transform: rotate(0deg);}
+to { -moz-transform: rotate(360deg); transform: rotate(360deg);}
+}
+@-webkit-keyframes spin {
+from { -webkit-transform: rotate(0deg);transform: rotate(0deg); }
+to { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+}
+@keyframes spin {
+from {transform:rotate(0deg);transform: rotate(0deg);}
+to {transform:rotate(360deg);transform: rotate(360deg);}
+}
+
+#color-switcher {
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  position: fixed;
+  top: 200px;
+  right: -220px;
+  width: 270px;
+  height: 50px;
+  transition: all 0.5s ease-in-out;
+  background: #ffffff url('') center no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: auto auto;
+  background-size: 40px 40px;
+  background-position: 5px 5px;
+  cursor: pointer;
+  z-index: 999999;
+  
+  button {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    border:none;
+    transform:rotate(45deg);
+  }
+  .temp-switch {
+    box-shadow:-10px 10px 0 0 rgba(122, 122, 122, 0.1);
+    border: 1px solid #eeeeee; 
+    border-left:none;
+    width:220px;
+    margin-left:50px;
+    padding:15px;
+    background:#fff;
+    h3 {
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eeeeee;
+      font-size: 16px;
+    }
+  }
+}
+.switcher-open {
+  right:0px !important;
+}

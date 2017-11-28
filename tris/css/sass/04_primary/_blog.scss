@@ -1,0 +1,134 @@
+
+/*=====================
+======Our Blog CSS=====
+======================*/
+
+#blog {
+  padding-bottom: 160px;
+  padding-top: 110px;
+}
+
+.blog-heading {
+  margin-bottom: 35px;
+  margin-top: 15px;
+} 
+
+.single-blog {
+  margin-bottom: 30px;
+  background-color: $c2;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid $c1;
+  border-top: 0;
+  border-bottom: 0;
+  position: relative;
+
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  h5 {
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top:15px;
+    text-transform: uppercase;
+  }
+  ul {
+    padding: 0;
+    overflow: hidden;
+    li {
+      border-right: 2px solid #999999;
+      float: left;
+      line-height: 10px;
+      list-style: none;
+      margin-right: 10px;
+      padding-right: 10px;
+      font-size: 12px;
+      color: #999;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+  &:after {
+      border-left: 175px solid transparent;
+      border-right: 175px solid transparent;
+      border-top: 61px solid $c2;
+      bottom: -61px;
+      content: "";
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 3;
+  }
+  &:before {
+      border-left: 1px solid #cacaca;
+      bottom: -131px;
+      content: "";
+      left: 82px;
+      position: absolute;
+      z-index: 2;
+      height: 190px;
+      transform: rotate(109deg);
+      width: 10px;
+  }
+  span {
+    &:after {
+      border-right: 1px solid #cacaca;
+      bottom: -132px;
+      content: "";
+      right: 83px;
+      position: absolute;
+      z-index: 2;
+      height: 192px;
+      transform: rotate(-109deg);
+      width: 10px;
+    }
+  }
+}
+
+.blog-content {
+  margin-bottom: 25px;
+  margin-top: 0;
+  line-height:28px;
+}
+
+.single-blog {
+  .btn-primary {
+    text-transform: uppercase;
+    color: $white;
+    background-color: $primary;
+    border-radius: 0;
+    border: none;
+    padding:0px;
+    @include font-size(1.4);
+    width:131px;
+    height:35px;
+    line-height:33px;
+    &:hover, &:focus {
+      background:$secondary;
+    }
+  }
+}
+
+#blog-detail {
+  .modal-body {
+    padding: 30px;
+    img {
+      width: 100%;
+    }
+  }
+  .close {
+    margin-right: -15px;
+    margin-top: -25px;
+  }
+}
+
+
+.single-blog-img {
+   overflow: hidden;
+   img {
+     display: block;
+     width: 100%;
+   }
+}

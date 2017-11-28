@@ -1,0 +1,213 @@
+
+/*====================
+======Responsive=====
+======================*/
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #navigation .navbar-nav.navbar-right li {
+    padding: 0 6px;
+  }
+  .single-member {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  #navigation .navbar-nav.navbar-right {
+    margin-top: 0;
+  }
+  .branding {
+    text-align:center;
+    .navbar-brand {
+      float:none;
+      display:inline-block;
+      position:relative;
+      top:7px;
+    }
+  }
+  .social {
+    margin-top:20px;
+    .text-right {
+      text-align:center;
+    }
+  }
+  .media, .media-body {
+    overflow: inherit !important;
+  }
+  #navigation {
+    .navbar-nav.navbar-right li a {
+      padding: 5px 0;
+    }
+    .navbar-inverse .navbar-nav .active a {
+      border: none;
+      &:focus {
+        border: none;
+      }
+    }
+    .navbar-nav.navbar-right li a:hover {
+      border: none;
+    }
+  }
+  #main-carousel .carousel-inner h2 {
+    border-bottom: 0;
+    font-size: 30px;
+  }
+  .slider-btn {
+    font-size: 16px;
+    height: 45px;
+    line-height: 45px;
+    width: 150px;
+  }
+  .title-one {
+    font-size: 24px;
+  }
+  #about-us p {
+    font-size: 14px;
+  }
+  #services h2 {
+    font-size: 24px;
+  }
+  .single-member {
+    margin-bottom: 25px;
+  }
+  #portfolio .portfolio-filter {
+    padding: 0;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  #clients-carousel .carousel-inner img {
+    width: 100%;
+  }
+  #gmap iframe {
+    height: 225px;
+  }
+  #footer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 479px) {
+  body section {
+    overflow: hidden;
+  }
+  #navigation .navbar-nav.navbar-right li a {
+    padding: 5px 0;
+  }
+  .media, .media-body {
+    overflow: inherit !important;
+  }
+  #navigation {
+    .navbar-inverse .navbar-nav .active a {
+      border: none;
+      &:focus {
+        border: none;
+      }
+    }
+    .navbar-nav.navbar-right li a:hover {
+      border: none;
+    }
+  }
+  #main-carousel .carousel-inner h2 {
+    border-bottom: 0;
+    font-size: 30px;
+  }
+  .slider-btn {
+    font-size: 16px;
+    height: 45px;
+    line-height: 45px;
+    width: 150px;
+  }
+  .title-one {
+    font-size: 24px;
+  }
+  #about-us p {
+    font-size: 14px;
+  }
+  #services h2 {
+    font-size: 24px;
+  }
+  .single-member {
+    margin-bottom: 25px;
+  }
+  #portfolio .portfolio-filter li {
+    margin-bottom: 10px;
+  }
+  #gmap iframe {
+    height: 225px;
+  }  .pattern {
+    height: 960px;
+  }
+  #footer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .single-blog {
+      overflow: hidden;
+      border-bottom: 1px solid $c1;
+  }
+  .contactform-wrapper {
+    overflow: hidden;
+  }
+  .pricing-btn {
+    overflow: hidden;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .stats-circle {
+    margin-bottom:40px;
+    &:after {
+      right:5% !important;
+    }
+    &:before {
+      position:absolute;
+      content:"";
+      width:20px;
+      height:20px;
+      bottom:30%;
+      left:5%;
+      transform:rotate(-45deg);
+      background: rgba($white,0.1);
+    }
+  }
+  .last-stat {
+    &:after {
+      display:block !important;
+    }
+  }
+  .our-service-section {
+    .icon, .icon-after, .icon-before {
+      &:after, &:before {
+        display:none;
+      }
+    }
+    .icon-top {
+      padding-bottom:30px;
+    }
+  }
+  .avatar-box {
+    &:after {
+      display:none;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width:980px) {
+  .icon-left {
+    .icon-wrapper {
+      float:none;
+      margin:5px auto 25px;
+    }
+    .service {
+      float:none;
+      width:100%;
+      text-align:center;
+    }
+  }
+}

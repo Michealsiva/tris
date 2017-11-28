@@ -1,0 +1,135 @@
+
+
+/*====================
+======Our Service and CTA CSS=====
+======================*/
+
+
+.our-service-section {
+  overflow: hidden;
+  padding: 110px 0;
+
+  .icon {
+    position:relative;
+    &:after {
+      position:absolute;
+      content:"";
+      width:72%;
+      border-bottom:1px solid $c1;
+      bottom:50%;
+      right:-42%;
+    }
+  }
+
+  .icon-before {
+    position:relative;
+    &:before {
+      position:absolute;
+      content:"";
+      width:30%;
+      bottom:50%;
+      border-bottom:1px solid $c1;
+      left:0px;
+    }
+  }
+
+  .icon-after {
+    position:relative;
+    &:after {
+      position:absolute;
+      content:"";
+      width:30%;
+      bottom:50%;
+      border-bottom:1px solid $c1;
+      right:0px;
+    }
+  }
+
+  .icon-title {
+    margin-bottom: 35px;
+    text-transform: uppercase;
+  }
+}
+.icon-top {
+  margin-top:1.5em;
+  .icon-title {
+    margin-bottom: 15px;
+    display: block; 
+    text-transform:uppercase;
+  }
+  p {
+    margin: 0;
+  }
+  .icon-wrapper  {
+    float: none;
+    margin: 0 auto 20px; 
+    width: 75px;
+    height: 75px;
+    transform: rotate(45deg);
+    border:1px solid $c1;
+    outline: none; 
+    .fa-stack {
+      text-align: left;
+      width: 75px;
+      height: 75px;
+      line-height: 75px;
+      transform: rotate(-45deg);
+      outline: none; 
+      color: $secondary;
+      font-size:32px;
+      i {
+        text-align:center;
+        width:100%;
+      }
+    }
+    .fa-mobile {
+       @include font-size(4.8);
+    }
+    .fa-rocket {
+       @include font-size(3.4);
+    }
+  }
+  .service {
+    text-align: center;
+    @include font-size(1.4);
+    margin-top:60px;
+    .text {
+      line-height:27px;
+    }
+  }
+  &:hover {
+    .icon-wrapper {
+      background:$primary;
+      border:1px solid $primary;
+      i {
+        color:$white;
+      }
+    }
+  }
+}
+
+ 
+/* CTA Section */
+
+#cta {
+  background-image: url("../images/cta.png");
+  background-color: $secondary;
+  padding: 190px 0px;
+  text-align: center;
+  background-position:center center;
+  color: $white;
+  h1 {
+    color: $white;
+    font-weight: 500;
+  }
+  p {
+    margin-bottom:0px;
+    a {
+       margin-top:1.4em;
+       @include font-size(1.8);
+       width:200px;
+       height:43px;
+       line-height:41px;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+
+
+/*====================
+======Contact CSS=====
+======================*/
+
+#contact {
+  background-color: $secondary;
+  position: relative;
+  padding-top: 85px;
+  color: $white;
+  .contact-details {
+      position: relative;
+      z-index:100;
+  }
+}
+
+.contactform-wrapper {
+    background-color: $white;
+    padding: 65px 10px 0px;
+    height: 400px;
+    position: relative;
+    //box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    &:after {
+        border-left: 375px solid transparent;
+        border-right: 375px solid transparent;
+        border-top: 72px solid $white;
+        bottom: -72px;
+        content: "";
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+    }
+}
+
+
+.social-icons {
+   margin-bottom: 65px;
+  a {
+    color: $white;
+    @include font-size(2.0);
+    text-align: center;
+    width: 43px;
+    height: 43px;
+    line-height:40px;
+    display: inline-block;
+    background-color: $secondary;
+    margin: 2px 15px;
+    transform: rotate(45deg);
+    .fa {
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+}
+
+
+
+#contact-form-section {
+  padding: 0px 35px;
+  .btn-primary {
+    background-color: $primary;
+    border-width: 0px;
+    border-radius: 0;
+    margin-top:10px;
+    padding: 11px 35px;
+    text-transform: uppercase;
+    transition: all 0.9s ease 0s;
+    -moz-transition: all 0.9s ease 0s;
+    -webkit-transition: all 0.9s ease 0s;
+    -o-transition: all 0.9s ease 0s;
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+}
+
+#contact-form {
+  input, textarea, .btn-primary {
+    position: relative;
+    z-index: 2;
+  }
+  .name-field, .mail-field {
+    width: 48%;
+  }
+  .name-field {
+    margin-right: 4%;
+    float: left;
+  }
+  .mail-field {}
+}
+
+#contact-form-section {
+  .form-control {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: $secondary;
+    @include font-size(1.5);
+    border: none;
+    border-bottom: 1px solid $c1;
+    text-align: center;
+  }
+  textarea {
+    resize: none;
+  }
+  .form-control:focus {
+    border-color: $primary;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .form-control::-moz-placeholder {
+     color: $secondary;
+  }
+}
+
+
+.form-group {
+    margin-bottom: 30px;
+    color: $secondary;
+}
+
+
+.map-wrapper {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  position: relative;
+  top: -180px;
+  margin-bottom: -180px;
+}
